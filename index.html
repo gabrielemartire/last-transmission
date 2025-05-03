@@ -280,6 +280,10 @@
         <button disabled>Sistemi</button>
         <button disabled>Comunicazioni</button>
         <button disabled>Navigazione</button>
+        <button class="hub-button" disabled>
+          <span class="hub-name">HUB 1</span>
+          <span class="status-indicator offline"></span>
+        </button>
         <button class="enabled" onclick="window.open('https://github.com/gabrielemartire/last-transmissions/tree/main', '_blank')">GitHub</button>
         <button disabled>Documentazione</button>
       </div>
@@ -300,6 +304,35 @@
     <div>© 2025 Mission Control</div>
     <div class="random-sequence" id="random-sequence">--</div>
   </footer>
+
+  <style>
+    /* Name of the hub (e.g., "HUB 1") */
+    .hub-name {
+      font-size: 14px;
+      color: #ff6347;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-right: 10px;
+      flex-grow: 1;
+    }
+
+    /* Style for the buttons */
+    .hub-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* LED status indicator (offline) */
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ff4d4d; /* Red for offline */
+      box-shadow: 0 0 10px rgba(255, 77, 77, 0.6); /* Glow effect */
+    }
+
+  </style>
 
   <script>
     function updateClocks() {
